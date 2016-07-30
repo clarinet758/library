@@ -17,6 +17,7 @@ pi=3.141592653589
 IS=float('inf')
 xy=[(1,0),(-1,0),(0,1),(0,-1)]
 bs=[(-1,-1),(-1,1),(1,1),(1,-1)]
+def niten(a,b): return abs(a-b) if a>=0 and b>=0 else  a+abs(b) if a>=0 else abs(a)+b if b>=0 else abs(abs(a)-abs(b))
 def gcd(a,b): return a if b==0 else gcd(b,a%b)
 def lcm(a,b): return a*b/gcd(a,b)
 def euclid_dis(x1,y1,x2,y2): return ((x1-x2)**2+(y1-y2)**2)**0.5
