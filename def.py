@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-import time
 import sys
-import io
 import re
 import math
 import itertools
@@ -18,6 +16,7 @@ IS=float('inf')
 xy=[(1,0),(-1,0),(0,1),(0,-1)]
 bs=[(-1,-1),(-1,1),(1,1),(1,-1)]
 def niten(a,b): return abs(a-b) if a>=0 and b>=0 else  a+abs(b) if a>=0 else abs(a)+b if b>=0 else abs(abs(a)-abs(b))
+def fib(n): return [(seq.append(seq[i-2] + seq[i-1]), seq[i-2])[1] for seq in [[0, 1]] for i in range(2, n)]
 def gcd(a,b): return a if b==0 else gcd(b,a%b)
 def lcm(a,b): return a*b/gcd(a,b)
 def eucl(x1,y1,x2,y2): return ((x1-x2)**2+(y1-y2)**2)**0.5
@@ -26,7 +25,6 @@ def pscl(num,l=[1]):
     for i in range(num):
         l = map(lambda x,y:x+y,[0]+l,l+[0])
     return l
-
 
 n=int(raw_input())
 n,k=map(int,raw_input().split())
