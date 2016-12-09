@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pypy3
 # -*- coding: UTF-8 -*-
 import sys
 import re
@@ -26,9 +26,8 @@ def pscl(num,l=[1]):
         l = map(lambda x,y:x+y,[0]+l,l+[0])
     return l
 
-n=int(raw_input())
-n,k=map(int,raw_input().split())
-l=map(int,raw_input().split())
+n=int(input())
+n,k=map(int,input().split())
+l=[int(i) for i in input().split()]
 ans=chk=0
-#end = time.clock()
-#print end - start
+print(ans)
