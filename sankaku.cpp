@@ -29,11 +29,11 @@ class Triangle {
     //三角形の角の大きさ
     double angleA, angleB, angleC;
     //余弦定理から3つの角度を求める
-    double LawOfCosines ( double a, double b, double c) {
-        return acos((b*b+c*c+a*a)/(2.0*b*c));
+    double LawOfCosines(double a, double b, double c) {
+        return acos((b*b+c*c-a*a)/(2.0*b*c));
     }
     //2つのdouble型が等しいか
-    bool equal (double a,double b) {
+    bool equal(double a,double b) {
         return (abs(a-b)<EPS)?true:false;
     }
 
@@ -46,13 +46,13 @@ class Triangle {
         edgeB=abs(c-a);
         edgeA=abs(b-c);
         edgeC=abs(a-b);
-        angeleA=LawOfCosines(edgeA, edgeB, edgeC);
-        angeleB=LawOfCosines(edgeB, edgeC, edgeA);
-        angeleC=LawOfCosines(edgeC, edgeA, edgeB);
+        angleA=LawOfCosines(edgeA, edgeB, edgeC);
+        angleB=LawOfCosines(edgeB, edgeC, edgeA);
+        angleC=LawOfCosines(edgeC, edgeA, edgeB);
     }
 
-    double circumscribedCircleRedius() {//外接円の半径
-        return (edgeA/sin(angelA)/2.0);
+    double circumscribedCircleRadius() {//外接円の半径
+        return (edgeA/sin(angleA)/2.0);
     }
 
     double circumscribedCircleX() {//外接円の中心X座標
@@ -73,8 +73,23 @@ class Triangle {
 
 int main(){
     int mod=1000000007;
-    int n,m;
-    scanf("%d %d",&n,&m);
+    int n;
+    double x1,y1,x2,y2,x3,y3;
+    double r,xp,yp;
+    scanf("%d",&n);
+    for (int i=0;i<n;i++) {
+        scanf("%lf %lf %lf %lf %lf %lf",&x1,&y1,&x2,&y2,&x3,&y3);
+        P a(x1,y1);
+        P b(x2,y2);
+        P c(x3,y3);
+        Triangle Tr(a,b,c);
+        xp=Tr.circumscribedCircleX();
+        yp=Tr.circumscribedCircleY();
+        r =Tr.circumscribedCircleRadius();
+
+        //printf("%.10f %.10f %.10f\n",xp,yp,r);
+        printf("%.3f %.3f %.3f\n",xp,yp,r);
+    }
 
     return 0;
 }
