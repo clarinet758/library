@@ -6,6 +6,8 @@
 #include<algorithm>
 using namespace std;
 
+#define PI 3.1415926535897932
+
 //typedef int kz;
 //typedef long kz;
 typedef long long kz;
