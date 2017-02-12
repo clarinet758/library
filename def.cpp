@@ -8,12 +8,11 @@ using namespace std;
 
 #define PI 3.1415926535897932
 
-//typedef int kz;
-//typedef long kz;
-typedef long long kz;
+//typedef long long ll;
 
-kz gcd(kz a,kz b) { if(b==0) return a; else gcd(b,a%b); }
-kz lcm(kz a,kz b) { return a*b/gcd(a,b); }
+
+int lcm(int a,int b) { return a*b/__gcd(a,b); }
+//ll lcm(ll a,ll b) { return a*b/__gcd(a,b); }
 
 /**
  * vector<int>ar(3);
