@@ -1,9 +1,5 @@
 #include<bits/stdc++.h>
-#include<vector>
-#include<list>
-#include<stack>
-#include<queue>
-#include<algorithm>
+
 using namespace std;
 
 #define PI 3.1415926535897932
