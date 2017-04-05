@@ -26,6 +26,8 @@ def pscl(num,l=[1]):
         l = map(lambda x,y:x+y,[0]+l,l+[0])
     return l
 
+# "!/usr/bin/env pypy3
+# pscl 要修正
 n=int(input())
 n,k=map(int,input().split())
 l=[int(i) for i in input().split()]
