@@ -34,6 +34,7 @@ class UnionFind:
 
 
 # 頂点数がn個  クエリがq件
+#n,q=map(int, input().split())
 n,q=map(int,raw_input().split())
 
 # 頂点数nで初期化
@@ -42,8 +43,10 @@ uf=UnionFind(n)
 # q==0 で頂点a,bを結合する
 # 0以外で同じグループか判定する
 for i in range(q):
+    #p,a,b=map(int, input().split())
     p,a,b=map(int,raw_input().split())
     if p==0:
         uf.unite(a,b)
     else:
+        #print('Yes' if uf.same(a,b) else 'No')
         print 'Yes' if uf.same(a,b) else 'No'
