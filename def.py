@@ -1,4 +1,4 @@
-#!/usr/bin/env pypy3
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 import sys
 import re
@@ -26,7 +26,6 @@ def choco(xa,ya,xb,yb,xc,yc,xd,yd): return 1 if abs((yb-ya)*(yd-yc)+(xb-xa)*(xd-
 #        l = map(lambda x,y:x+y,[0]+l,l+[0])
 #    return l
 
-# "!/usr/bin/env pypy3
 # pscl 要修正
 n=int(input())
 n,k=map(int,input().split())
