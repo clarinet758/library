@@ -6,6 +6,7 @@ import math
 import itertools
 import collections
 import bisect
+import fractions
 #sys.stdin=file('input.txt')
 #sys.stdout=file('output.txt','w')
 #10**9+7
@@ -25,7 +26,7 @@ def choco(xa,ya,xb,yb,xc,yc,xd,yd): return 1 if abs((yb-ya)*(yd-yc)+(xb-xa)*(xd-
 #    for i in range(num):
 #        l = map(lambda x,y:x+y,[0]+l,l+[0])
 #    return l
-
+# fractions.gcd(x,y)
 # pscl 要修正
 n=int(input())
 n,k=map(int,input().split())
