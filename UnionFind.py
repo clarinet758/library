@@ -1,10 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
 class UnionFind:
     def __init__(self, size):
         self.rank=[0]*size
-        self.par =range(size)
+        self.par =[int(i) for i in range(size)]
         self.grp =size
 
     def find(self, x):
@@ -35,7 +35,7 @@ class UnionFind:
 
 # 頂点数がn個  クエリがq件
 #n,q=map(int, input().split())
-n,q=map(int,raw_input().split())
+n,q=map(int, input().split())
 
 # 頂点数nで初期化
 uf=UnionFind(n)
@@ -44,9 +44,9 @@ uf=UnionFind(n)
 # 0以外で同じグループか判定する
 for i in range(q):
     #p,a,b=map(int, input().split())
-    p,a,b=map(int,raw_input().split())
+    p,a,b=map(int, input().split())
     if p==0:
         uf.unite(a,b)
     else:
         #print('Yes' if uf.same(a,b) else 'No')
-        print 'Yes' if uf.same(a,b) else 'No'
+        print('Yes' if uf.same(a,b) else 'No')
