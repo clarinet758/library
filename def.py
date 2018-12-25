@@ -22,6 +22,7 @@ def fib(n): return [(seq.append(seq[i-2] + seq[i-1]), seq[i-2])[1] for seq in [[
 def lcm(a,b): return a*b//fractions.gcd(a,b)
 def eucl(x1,y1,x2,y2): return ((x1-x2)**2+(y1-y2)**2)**0.5
 def choco(xa,ya,xb,yb,xc,yc,xd,yd): return 1 if abs((yb-ya)*(yd-yc)+(xb-xa)*(xd-xc))<1.e-10 else 0
+def eof(t): print(t); exit()
 
 
 n=int(input())
