@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 import sys
+input=sys.stdin.readline
 import re
 import math
 import itertools
