@@ -11,8 +11,6 @@ using namespace std;
 #define sl3(a,b,c)  scanf("%lld %lld %lld",&a,&b,&c)
 #define PI 3.1415926535897932
 
-
-
 int lcm(int a,int b) { return a*b/__gcd(a,b); }
 //long long lcm(ll a,ll b) { return a*b/__gcd(a,b); }
 
