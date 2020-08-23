@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import sys
 input=sys.stdin.readline
+sys.setrecursionlimit(3000)
 import re
 import math
 import itertools
