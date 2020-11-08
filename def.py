@@ -23,8 +23,9 @@ def fib(n): return [(seq.append(seq[i-2] + seq[i-1]), seq[i-2])[1] for seq in [[
 # fractions.gcd(x,y)
 def lcm(a,b): return a*b//fractions.gcd(a,b)
 def eucl(x1,y1,x2,y2): return ((x1-x2)**2+(y1-y2)**2)**0.5
-def tri(xa,ya,xb,yb,xc,yc): return (xa-xc)*(yb-yc)-(xb-xc)*(ya-yc)
-def sig(a) return a*(a+1)//2
+def tri(xa,ya,xb,yb,xc,yc): return (xa-xc)*(yb-yc)-(xb-xc)*(ya-yc) #三点の座標で面積
+def sig(a): return a*(a+1)//2 #総和
+def ata(a): return a*(a-1)//2 #総当たり戦
 def choco(xa,ya,xb,yb,xc,yc,xd,yd): return 1 if abs((yb-ya)*(yd-yc)+(xb-xa)*(xd-xc))<1.e-10 else 0
 def eof(t): print(t); exit()
 
