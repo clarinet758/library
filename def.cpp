@@ -10,11 +10,15 @@ using namespace std;
 #define sl2(a,b)  scanf("%lld %lld",&a,&b)
 #define sl3(a,b,c)  scanf("%lld %lld %lld",&a,&b,&c)
 #define PI 3.1415926535897932
+//int64_t はatcoderメリット不明のため long long
+#define ll long long
+//#define ll int64_t
+
 
 //
 int souwa(int a) {return (1+a)*a/2;}
 int lcm(int a,int b) { return a*b/__gcd(a,b); }
-//long long lcm(ll a,ll b) { return a*b/__gcd(a,b); }
+//l l lcm(ll a,ll b) { return a*b/__gcd(a,b); }
 
 //
 bool sankaku(int a,int b,int c) {vector <int> t={a,b,c};sort(t.begin(),t.end()); return t.at(0)+t.at(1)>t.at(2);};
@@ -29,11 +33,14 @@ bool sankaku(int a,int b,int c) {vector <int> t={a,b,c};sort(t.begin(),t.end());
 
 int main(){
     int mod=1000000007;
-    int n,m,ans;
+    int n,m,a,b,cnt=0,ans=0;
+    string s,t;
+    cin >> n;
+    //cin >> m;
+    vector<int> a(n);
+    rep(i,n) cin >> a.at(i);
+    //sort(a.begin(),a.end());
+
     //scanf("%d %d",&n,&m);
-    n=5;
-    per (i,n) {
-        printf("%d\n",i);
-    }
     return 0;
 }
