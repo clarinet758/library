@@ -13,6 +13,7 @@ using namespace std;
 //int64_t はatcoderメリット不明のため long long
 #define ll long long
 //#define ll int64_t
+#define print(a) cout << a << endl
 
 
 //
@@ -40,7 +41,8 @@ int main(){
     vector<int> a(n);
     rep(i,n) cin >> a.at(i);
     //sort(a.begin(),a.end());
-
     //scanf("%d %d",&n,&m);
+
+    print(ans);
     return 0;
 }
