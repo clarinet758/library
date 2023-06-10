@@ -15,7 +15,7 @@ using namespace std;
 
 #define Yes printf("Yes\n")
 #define No printf("No\n")
-void yneso(int a) {if(a) Yes; else No;}
+void yneso(int a) {if(a) cout << Yes; else cout << No;}
 
 //int64_t はatcoderメリット不明のため long long
 typedef long long ll;
@@ -37,6 +37,7 @@ bool sankaku(int a,int b,int c) {vector <int> t={a,b,c};sort(t.begin(),t.end());
  * vector<vector<int>> a(5,vector<int>)
     int sum=accumulate(ar.begin(),ar.end(),0); 
     do {// do内部で作られた順列に対して必要な処理を行う
+        //必ず事前にソートしておくこと、配列の中身を見ていて？辞書順に次のもの次のもの作成するのでソートしておかないと列挙が漏れる
         // cout << w.at(0) << w.at(1) << w.at(2) << endl;
     } while (next_permutation(w.begin(),w.end()));  //ex. vector <int> w= {1,2,3}; **/
 
